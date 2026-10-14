@@ -1,1 +1,1 @@
-# graphics-module
+# Graphics Module
