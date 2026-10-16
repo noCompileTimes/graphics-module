@@ -19,8 +19,8 @@ namespace graphics::opengl
         glBindBuffer(target, handle);
     }
 
-    auto Buffer::data(const uint32_t target, const void* data, const uint32_t size) -> void
+    auto Buffer::data(const uint32_t size, const void* data) const -> void
     {
-        glBufferData(target, size, data, GL_STATIC_DRAW);
+        glNamedBufferData(handle, size, data, GL_STATIC_DRAW);
     }
 }
