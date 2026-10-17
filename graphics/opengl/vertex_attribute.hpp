@@ -8,6 +8,6 @@ namespace graphics::opengl
         uint32_t start;
         uint32_t size;
         uint32_t type;
-        uint32_t stride;
+        uint32_t slot;
     };
 }

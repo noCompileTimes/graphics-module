@@ -26,9 +26,10 @@ namespace graphics::opengl
 
     auto VertexArray::attach_attribute(const vertex_attribute& attribute) const -> void
     {
-        glEnableVertexAttribArray(attribute.index); // TODO convert them to Direct State Access
+        glVertexArrayAttribFormat(handle, attribute.index, attribute.size, attribute.type, 0, attribute.start);
+        glVertexArrayAttribBinding(handle, attribute.index, attribute.slot);
 
-        glVertexAttribPointer(attribute.index, attribute.size, attribute.type, 0, attribute.stride, reinterpret_cast<void*>(attribute.start));
+        glEnableVertexArrayAttrib(handle, attribute.index);
     }
 
     auto VertexArray::bind() const -> void

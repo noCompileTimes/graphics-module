@@ -12,6 +12,6 @@ namespace graphics::opengl
 
         auto data(uint32_t size, const void* data) const -> void; // TODO use a std::span here (maybe as std::byte)
 
-        auto bind(uint32_t target) const -> void;
+        [[maybe_unused]] auto bind(uint32_t target) const -> void;
     };
 }
