@@ -12,7 +12,8 @@ namespace graphics::opengl
         auto  create()       -> void override;
         auto destroy() const -> void override;
 
-        auto data(uint32_t size, const void* data) const -> void; // TODO use a std::span here (maybe as std::byte)
+        auto    data(uint32_t size, const void* data) const -> void; // TODO use a std::span here (maybe as std::byte)
+        auto subdata(uint32_t start, uint32_t size, const void* data) const -> void;
 
         [[maybe_unused]] auto bind(uint32_t target)                 const -> void;
         [[maybe_unused]] auto bind(uint32_t target, uint32_t index) const -> void;

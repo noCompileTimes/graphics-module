@@ -39,4 +39,9 @@ namespace graphics::opengl
     {
         glNamedBufferData(handle, size, data, GL_STATIC_DRAW);
     }
+
+    auto Buffer::subdata(const uint32_t start, const uint32_t size, const void* data) const -> void
+    {
+        glNamedBufferSubData(handle, start, size, data);
+    }
 }
