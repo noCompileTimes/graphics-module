@@ -16,7 +16,23 @@ namespace graphics::opengl
 
     auto Buffer::bind(const uint32_t target) const -> void
     {
+        // TODO assert the correct/desired type of buffer
+
         glBindBuffer(target, handle);
+    }
+
+    auto Buffer::bind(const uint32_t target, const uint32_t index) const -> void
+    {
+        // TODO assert the correct/desired type of buffer
+
+        glBindBufferBase(target, index, handle);
+    }
+
+    auto Buffer::bind(const uint32_t target, const uint32_t index, const GLintptr start, const GLsizeiptr size) const -> void
+    {
+        // TODO assert the correct/desired type of buffer
+
+        glBindBufferRange(target, index, handle, start, size);
     }
 
     auto Buffer::data(const uint32_t size, const void* data) const -> void
