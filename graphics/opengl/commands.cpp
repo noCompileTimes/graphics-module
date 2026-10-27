@@ -9,9 +9,11 @@ namespace graphics::opengl
         glDrawArrays(primitive, start, count);
     }
 
-    auto Commands::draw_elements(const uint32_t primitive, [[maybe_unused]] int32_t start, const int32_t count) -> void
+    auto Commands::draw_elements(const uint32_t primitive, const int32_t start, const int32_t count) -> void
     {
-        glDrawElements(primitive, count, GL_UNSIGNED_INT, nullptr);
+        // TODO handle the start/offset in here
+
+        glDrawElements(primitive, count, GL_UNSIGNED_INT, reinterpret_cast<const void*>(static_cast<uintptr_t>(start) * sizeof(uint32_t)));
     }
 
     auto Commands::viewport(const int32_t x, const int32_t y, const int32_t width, const int32_t height) -> void

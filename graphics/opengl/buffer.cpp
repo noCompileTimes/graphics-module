@@ -37,7 +37,7 @@ namespace graphics::opengl
 
     auto Buffer::data(const uint32_t size, const void* data) const -> void
     {
-        glNamedBufferData(handle, size, data, GL_STATIC_DRAW);
+        glNamedBufferData(handle, size, data, GL_STATIC_DRAW); // TODO - delete this after using storage
     }
 
     auto Buffer::subdata(const uint32_t start, const uint32_t size, const void* data) const -> void

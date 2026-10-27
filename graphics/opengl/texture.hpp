@@ -7,7 +7,7 @@ namespace graphics::opengl
     class Texture final : public Object
     {
     public:
-        auto create()        -> void override;
+        auto create()        -> void override; // TODO create an override for the create function which has the type as parameter and call create after?
         auto destroy() const -> void override;
 
         auto storage(int32_t width, int32_t height, uint32_t format, uint32_t levels) const -> void;

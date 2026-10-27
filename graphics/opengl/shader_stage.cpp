@@ -6,11 +6,18 @@
 
 namespace graphics::opengl
 {
+    auto ShaderStage::create(const uint32_t type) -> void
+    {
+        _type = type;
+
+        create();
+    }
+
     auto ShaderStage::create() -> void
     {
-        assert(type != 0); // TODO check for the existing shader types?
+        assert(_type != 0); // TODO check for the existing shader types?
 
-        handle = glCreateShader(type);
+        handle = glCreateShader(_type);
     }
 
     auto ShaderStage::destroy() const -> void
@@ -24,5 +31,10 @@ namespace graphics::opengl
 
         glShaderSource(handle, 1, &source, nullptr);
         glCompileShader(handle);
+    }
+
+    auto ShaderStage::type(const uint32_t type) -> void
+    {
+        _type = type;
     }
 }
