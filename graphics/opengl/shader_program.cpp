@@ -1,7 +1,5 @@
 #include "shader_program.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto ShaderProgram::create() -> void

@@ -1,7 +1,5 @@
 #include "buffer.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Buffer::create() -> void

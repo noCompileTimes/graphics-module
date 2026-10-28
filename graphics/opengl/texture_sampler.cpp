@@ -1,7 +1,5 @@
 #include "texture_sampler.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto TextureSampler::create() -> void

@@ -1,7 +1,5 @@
 #include "renderbuffer.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Renderbuffer::create() -> void

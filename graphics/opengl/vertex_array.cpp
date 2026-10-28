@@ -1,7 +1,5 @@
 #include "vertex_array.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto VertexArray::create() -> void

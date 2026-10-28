@@ -1,7 +1,5 @@
 #include "shader_stage.hpp"
 
-#include <glad/glad.h>
-
 #include <cassert>
 
 namespace graphics::opengl

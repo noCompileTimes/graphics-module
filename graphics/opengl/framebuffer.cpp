@@ -1,7 +1,5 @@
 #include "framebuffer.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     auto Framebuffer::create() -> void

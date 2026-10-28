@@ -2,8 +2,6 @@
 
 #include "object.hpp"
 
-#include <glad/glad.h>
-
 namespace graphics::opengl
 {
     class Buffer final : public Object
