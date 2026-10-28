@@ -12,6 +12,6 @@ namespace graphics::opengl
 
         virtual ~Object() = default;
 
-        uint32_t handle; // TODO make this private and have a handle getter
+        uint32_t handle { }; // TODO make this private and have a handle getter
     };
 }

@@ -12,7 +12,7 @@ namespace graphics::opengl
         auto  create()       -> void override;
         auto destroy() const -> void override;
 
-        auto attach_vertices(const Buffer& buffer, uint32_t stride) const -> void;
+        auto attach_vertices(const Buffer& buffer, uint32_t stride) const -> void; // TODO just name them attach? all three of them?
         auto attach_elements(const Buffer& buffer) const -> void;
 
         auto attach_attribute(const vertex_attribute& attribute) const -> void;
