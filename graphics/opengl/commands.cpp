@@ -28,4 +28,11 @@ namespace graphics::opengl
     {
         glClear(mask);
     }
+
+    auto Commands::read_pixels(const int32_t x, const int32_t y, const int32_t width, const int32_t height, const uint32_t format, const uint32_t type, const int32_t size) -> void
+    {
+        // TODO in the future calculate the buffer size inside here? based on width/height and format? remove size parameter after
+
+        glReadnPixels(x, y, width, height, format, type, size, nullptr);
+    }
 }
