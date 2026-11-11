@@ -1,4 +1,4 @@
-project(graphics-module)
+project(graphics-module LANGUAGES CXX)
 
 add_library(${PROJECT_NAME})
 
