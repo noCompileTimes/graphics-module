@@ -31,7 +31,7 @@ namespace graphics::opengl
         glBindBufferBase(target, index, handle);
     }
 
-    auto Buffer::bind(const uint32_t target, const uint32_t index, const GLintptr start, const GLsizeiptr size) const -> void
+    auto Buffer::bind(const uint32_t target, const uint32_t index, const uint32_t start, const uint32_t size) const -> void
     {
         // TODO assert the correct/desired type of buffer
 
@@ -43,7 +43,7 @@ namespace graphics::opengl
         glNamedBufferSubData(handle, start, size, data);
     }
 
-    auto Buffer::map(const GLintptr start, const GLintptr size, const uint32_t flags) const -> void*
+    auto Buffer::map(const uint32_t start, const uint32_t size, const uint32_t flags) const -> void*
     {
         return glMapNamedBufferRange(handle, start, size, flags);
     }

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cstdint>
-
 namespace graphics::opengl
 {
     class Pipeline

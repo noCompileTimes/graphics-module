@@ -2,8 +2,6 @@
 
 #include "object.hpp"
 
-#include <string>
-
 namespace graphics::opengl
 {
     class ShaderStage final : public Object

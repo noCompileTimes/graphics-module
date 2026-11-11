@@ -1,7 +1,5 @@
 #include "shader_stage.hpp"
 
-#include <cassert>
-
 namespace graphics::opengl
 {
     auto ShaderStage::create(const uint32_t type) -> void
