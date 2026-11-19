@@ -1,1 +1,2 @@
-target_precompile_headers(${PROJECT_NAME} PUBLIC $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/headers.hpp>) # TODO remove the $<$<COMPILE_LANGUAGE:CXX>:...> once we do not build any c libraries anymore (it only stops a c precompiled header from being generated)
+ target_precompile_headers(${PROJECT_NAME} PUBLIC $<$<COMPILE_LANGUAGE:CXX>:${CMAKE_CURRENT_SOURCE_DIR}/headers.hpp>) # TODO remove the $<$<COMPILE_LANGUAGE:CXX>:...> once we do not build any c libraries anymore (it only stops a c precompiled header from being generated)
+target_include_directories(${PROJECT_NAME} PUBLIC ..)
