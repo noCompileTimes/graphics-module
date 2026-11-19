@@ -10,6 +10,7 @@ namespace graphics::opengl
         auto  create()       -> void override;
         auto destroy() const -> void override;
 
+        // TODO this should be called allocate?
         auto storage(uint32_t width, uint32_t height, uint32_t format) const -> void;
     };
 }

@@ -16,7 +16,7 @@ namespace graphics::opengl
 
         // TODO maybe the level should be first?
         auto clear(const float* color, int32_t level) const -> void; // TODO try it with a span for values?
-        auto clear(float depth) const -> void;
+        auto clear(float depth)                       const -> void;
 
         auto bind() const -> void;
     };
