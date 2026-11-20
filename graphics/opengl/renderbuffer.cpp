@@ -12,7 +12,7 @@ namespace graphics::opengl
         glDeleteRenderbuffers(1, &handle);
     }
 
-    auto Renderbuffer::storage(const uint32_t width, const uint32_t height, const uint32_t format) const -> void
+    auto Renderbuffer::allocate(const uint32_t width, const uint32_t height, const uint32_t format) const -> void
     {
         glNamedRenderbufferStorage(handle, format, width, height);
     }

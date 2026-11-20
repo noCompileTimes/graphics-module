@@ -11,8 +11,8 @@ namespace graphics::opengl
         auto destroy() const -> void override;
 
         // TODO use a std::span here (maybe as std::byte)
-        auto storage(uint32_t size, const void* data, uint32_t flags) const -> void;
-        auto subdata(uint32_t start, uint32_t size, const void* data) const -> void; // TODO call it upload? also in texture
+        auto allocate(uint32_t size, const void* data, uint32_t flags) const -> void;
+        auto   upload(uint32_t start, uint32_t size, const void* data) const -> void;
 
         [[maybe_unused]] auto   map(uint32_t start, uint32_t size, uint32_t flags) const -> void*;
         [[maybe_unused]] auto unmap()                                              const -> void;

@@ -12,7 +12,7 @@ namespace graphics::opengl
         glDeleteBuffers(1, &handle);
     }
 
-    auto Buffer::storage(const uint32_t size, const void* data, const uint32_t flags) const -> void
+    auto Buffer::allocate(const uint32_t size, const void* data, const uint32_t flags) const -> void
     {
         glNamedBufferStorage(handle, size, data, flags);
     }
@@ -38,7 +38,7 @@ namespace graphics::opengl
         glBindBufferRange(target, index, handle, start, size);
     }
 
-    auto Buffer::subdata(const uint32_t start, const uint32_t size, const void* data) const -> void
+    auto Buffer::upload(const uint32_t start, const uint32_t size, const void* data) const -> void
     {
         glNamedBufferSubData(handle, start, size, data);
     }
