@@ -9,8 +9,6 @@ namespace graphics::opengl
 
     auto Commands::draw_elements(const uint32_t primitive, const int32_t start, const int32_t count) -> void
     {
-        // TODO handle the start/offset in here
-
         glDrawElements(primitive, count, GL_UNSIGNED_INT, reinterpret_cast<const void*>(static_cast<uintptr_t>(start) * sizeof(uint32_t)));
     }
 
