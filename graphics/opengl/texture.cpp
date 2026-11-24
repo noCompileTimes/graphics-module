@@ -2,11 +2,16 @@
 
 namespace graphics::opengl
 {
+    Texture::Texture(const uint32_t type)
+        : _type { type }
+    {
+    }
+
     auto Texture::create() -> void
     {
-        assert(type != 0); // TODO check for existing texture target types
+        assert(_type == GL_TEXTURE_2D);
 
-        glCreateTextures(type, 1, &handle);
+        glCreateTextures(_type, 1, &handle);
     }
 
     auto Texture::destroy() const -> void

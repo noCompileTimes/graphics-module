@@ -7,15 +7,14 @@ namespace graphics::opengl
     class ShaderStage final : public Object
     {
     public:
-        auto  create(uint32_t type) -> void;
-        auto  create()              -> void override;
-        auto destroy()        const -> void override;
+        explicit ShaderStage(uint32_t type);
 
-        auto source(const std::string& code) const -> void;
+        auto  create()       -> void override;
+        auto destroy() const -> void override;
 
-        auto type(uint32_t type) -> void;
+        auto  source(const std::string& code) const -> void;
 
     private:
-        uint32_t _type { };
+        uint32_t _type;
     };
 }
