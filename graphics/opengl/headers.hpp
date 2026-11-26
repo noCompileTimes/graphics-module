@@ -2,7 +2,7 @@
 
 #include <glad/glad.h>
 
-#include <string>
+#include <print>
 
 #include <cassert>
 #include <cstdint>
